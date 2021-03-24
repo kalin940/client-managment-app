@@ -1,0 +1,18 @@
+<div class="contact-details-container" *ngIf="contactsService.selectedContact as c">
+
+    <div class="card">
+      <h3 class="card-header">
+        Contact
+      </h3>
+      <div class="card-body">
+        <p>Phone:  <span class="badge badge-primary">{{c.number}}</span></p>
+        <p>Name: <span class="badge badge-primary">{{c.user.name}}</span></p>
+        <p>Age: <span class="badge badge-primary">{{c.user.age}}</span></p>
+        <p>Email:  <span class="badge badge-primary">{{c.user.email}}</span></p>
+        <p>Country:  <span class="badge badge-primary">{{c.user.country.name}}</span></p>
+        <p>Date created:  <span class="badge badge-primary">{{c.dateCreated | date :'short'}}</span></p>
+      </div>
+      
+    </div>
+  
+  </div>

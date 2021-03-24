@@ -1,0 +1,61 @@
+<button (click)="CreateNew()" class="btn btn-new">
+  New
+</button>
+
+  <div class="container-table100">
+    <div class="wrap-table100">
+  <div class="table100 ver1 m-b-110">
+    <div class="table100-head">
+    
+      <table>
+        <thead>
+          <tr class="row100 head">
+            <th class="cell100 column1">#</th>
+            <th class="cell100 column2">Name</th>
+            <th class="cell100 column3">Email</th>
+            <th class="cell100 column4">Country</th>
+            <th class="cell100 column5">Number</th>
+            <th class="cell100 column6"></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div class="table100-body js-pscroll">
+      <table>
+        <tbody>
+          <tr class="row100 body" *ngFor="let c of contactsService.contactsList">
+            <td class="cell100 column1">{{c.id}}</td>
+            <td class="cell100 column2">{{c.user.name}}</td>
+            <td class="cell100 column3">{{c.user.email}}</td>
+            <td class="cell100 column4">{{c.user.country.name}}</td>
+            <td class="cell100 column5">{{c.number}}</td>
+            <td class="cell100 column6">
+              <span class="float-right">
+                <!-- (click)="showDetails(c)" -->
+             
+              <button (click)="showDetails(c.id)" class="btn btn-detail">
+                DETAILS
+              </button>
+      
+              <button (click)="showForEdit(c.id)" class="btn btn-edit">
+                EDIT
+              </button>
+      
+              <button (click)="onDelete(c.id)" class="btn btn-delete">
+                DELETE
+              </button>
+      
+            </span>
+            </td>
+          </tr>
+
+          
+       
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ng-template #loading>
+    <span>loading contacts...</span>
+  </ng-template>

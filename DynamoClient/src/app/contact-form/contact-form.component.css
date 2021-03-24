@@ -1,0 +1,31 @@
+.create-form{
+    margin-left:10%;
+    padding:1em;
+    border-style: outset;
+    width: 25%;
+}
+div{
+    padding:5px;
+}
+.form-title{
+    font-family: Poppins-Bold;
+    font-size: 1.5em;
+    color: #333333;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+input{
+    display: block;
+    width: 80%;
+    font-family: Poppins-Medium;
+    padding: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    outline: none;
+}
+
+.select-css{
+    margin-left: 5%;
+    padding: 0.5%;
+}
